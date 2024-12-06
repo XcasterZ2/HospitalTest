@@ -10,7 +10,7 @@ export class MainContentComponent implements OnInit {
   // กำหนดค่าตัวแปร
   currentDate: string = '';
   selectedButtonIndex: number = 0;
-
+  selectedButtonIndexDoctor: number = 0;
   // วันที่
   ngOnInit() {
     this.currentDate = this.getCurrentThaiDate();
@@ -50,7 +50,24 @@ export class MainContentComponent implements OnInit {
     'Medicine (F2)'
   ];
 
+  buttons2: string[] = [
+    'ซักประวัติหน้าห้องพยาบาล',
+    'การพยาบาล',
+    'เวชกรรมสังคม',
+    'COVID-19',
+    'การตรวจตา',
+    'คลินิกระงับปวด',
+    'อาชีวเวชกรรม',
+    'MEMO',
+    'MEMO จิตเวช',
+    'คัดกรอง CLCP',
+
+  ];
   onButtonClick(index: number) {
     this.selectedButtonIndex = index;  // อัพเดตเมื่อกดปุ่ม
+  }
+
+  onButtonClickDoctor(index: number): void {
+    this.selectedButtonIndexDoctor = index;
   }
 }

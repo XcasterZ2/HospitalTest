@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-content-right',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './content-right.component.scss'
 })
 export class ContentRightComponent {
-
+  @Input() selectedButtonIndex: number = 0;
+  @Input() selectedButtonIndexDoctor: number = 0;
 }

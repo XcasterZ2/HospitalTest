@@ -20,6 +20,10 @@ import { NavMenuComponent } from './home-main/nav-bar/nav-menu/nav-menu.componen
 import { MainContentComponent } from './home-main/main-content/main-content.component';
 import { ContentLeftComponent } from './home-main/main-content/content-left/content-left.component';
 import { ContentRightComponent } from './home-main/main-content/content-right/content-right.component';
+import { DoctorScreenLeftComponent } from './home-main/main-content/content-left/doctor-screen-left/doctor-screen-left.component';
+import { FilteringInfomationLeftComponent } from './home-main/main-content/content-left/filtering-infomation-left/filtering-infomation-left.component';
+import { DoctorScreenRightComponent } from './home-main/main-content/content-right/doctor-screen-right/doctor-screen-right.component';
+import { FilteringInfomationRightComponent } from './home-main/main-content/content-right/filtering-infomation-right/filtering-infomation-right.component';
 
 
 @NgModule({
@@ -42,6 +46,10 @@ import { ContentRightComponent } from './home-main/main-content/content-right/co
     MainContentComponent,
     ContentLeftComponent,
     ContentRightComponent,
+    DoctorScreenLeftComponent,
+    FilteringInfomationLeftComponent,
+    DoctorScreenRightComponent,
+    FilteringInfomationRightComponent,
   ],
   imports: [
     BrowserModule,

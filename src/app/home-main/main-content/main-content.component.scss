@@ -87,3 +87,27 @@
         align-items: center;
     }
 }
+
+.doctor-screen{
+    .doctor-screen-btn {
+        width: fit-content;
+        height: 100%;
+        border-radius: 10px;
+        border: 1px solid;
+        padding: 10px 8px;
+        background-color: #7D7D7D;
+        color: white;
+    }
+
+    .active {
+        background-color: #4CC0A5;
+    }
+
+    span {
+        font-weight: 700;
+        font-size: 14px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+}
