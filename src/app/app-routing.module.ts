@@ -14,7 +14,7 @@ const routes: Routes = [
       { path: 'home', component: HomeContentComponent }, // เส้นทาง /home
     ],
   },
-  { path: '**', redirectTo: 'home' }, // เส้นทางใดๆ ที่ไม่ตรง จะ Redirect ไป /home
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
