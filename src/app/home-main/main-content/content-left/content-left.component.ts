@@ -7,6 +7,7 @@ import { Component , Input} from '@angular/core';
 })
 export class ContentLeftComponent {
   @Input() selectedButtonIndex: number = 0; // รับค่า selectedButtonIndex จาก parent
-
+  @Input() selectedButtonIndexDoctor: number = 0;
+  
   constructor() { }
 }
