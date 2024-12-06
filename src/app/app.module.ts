@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,12 @@ import { HomeSidebarMenuListComponent } from './home/home-sidebar/home-sidebar-m
 import { HomeHeaderInfoComponent } from './home/home-headbar/home-header-info/home-header-info.component';
 import { HomeHeaderVitalSignComponent } from './home/home-headbar/home-header-vital-sign/home-header-vital-sign.component';
 import { HomeHeaderHeadbarBtnComponent } from './home/home-headbar/home-header-headbar-btn/home-header-headbar-btn.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeMainComponent } from './home-main/home-main.component';
+import { NavBarComponent } from './home-main/nav-bar/nav-bar.component';
+import { NavMenuComponent } from './home-main/nav-bar/nav-menu/nav-menu.component';
+import { MainContentComponent } from './home-main/main-content/main-content.component';
+import { ContentLeftComponent } from './home-main/main-content/content-left/content-left.component';
+import { ContentRightComponent } from './home-main/main-content/content-right/content-right.component';
 
 
 @NgModule({
@@ -30,6 +36,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeHeaderInfoComponent,
     HomeHeaderVitalSignComponent,
     HomeHeaderHeadbarBtnComponent,
+    HomeMainComponent,
+    NavBarComponent,
+    NavMenuComponent,
+    MainContentComponent,
+    ContentLeftComponent,
+    ContentRightComponent,
   ],
   imports: [
     BrowserModule,
