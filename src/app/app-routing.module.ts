@@ -6,7 +6,6 @@ import { HomeMainComponent } from './home-main/home-main.component'; // นำ�
 
 const routes: Routes = [
   { path: 'home-main', component: HomeMainComponent }, // เส้นทาง /home-main
-
   {
     path: '',
     component: HomeComponent,
@@ -14,7 +13,7 @@ const routes: Routes = [
       { path: 'home', component: HomeContentComponent }, // เส้นทาง /home
     ],
   },
-  { path: '**', redirectTo: 'home', pathMatch: 'full' }
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }, // แก้เส้นทางไม่พบให้ไปที่ /home
 ];
 
 @NgModule({
