@@ -5,15 +5,15 @@ import { HomeContentComponent } from './home/home-content/home-content.component
 import { HomeMainComponent } from './home-main/home-main.component'; // นำเข้า HomeMainComponent
 
 const routes: Routes = [
-  { path: 'home-main', component: HomeMainComponent }, // เส้นทาง /home-main
+ 
   {
     path: '',
-    component: HomeComponent,
+    component: HomeMainComponent,
     children: [
-      { path: 'home', component: HomeContentComponent }, // เส้นทาง /home
+      { path: 'home-main', component: HomeMainComponent }, // เส้นทาง /home-main
     ],
   },
-  { path: '**', redirectTo: 'home', pathMatch: 'full' }, // แก้เส้นทางไม่พบให้ไปที่ /home
+  { path: '**', redirectTo: 'home-main', pathMatch: 'full' }, // แก้เส้นทางไม่พบให้ไปที่ /home
 ];
 
 @NgModule({
