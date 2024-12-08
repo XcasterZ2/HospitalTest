@@ -1,11 +1,9 @@
-
-
-.content-right-2{
-    button{
+.content-right-2 {
+    button {
         margin: 0;
         width: 140px;
         height: 39px;
-        border: 1px solid ;
+        border: 1px solid;
         padding: 5px;
         gap: 10px;
         background-color: #62929E;
@@ -16,4 +14,9 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+span, input,label{
+    font-size: 10px;
+    font-weight: 500;
 }
