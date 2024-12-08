@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './filtering-infomation-left.component.scss'
 })
 export class FilteringInfomationLeftComponent {
-
+  isTreatmentSelected: boolean = false;
 }
