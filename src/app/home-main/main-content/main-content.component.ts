@@ -10,7 +10,7 @@ export class MainContentComponent implements OnInit {
   // กำหนดค่าตัวแปร
   currentDate: string = '';
   selectedButtonIndex: number = 0;
-  selectedButtonIndexDoctor: number = 0;
+  selectedButtonIndexDoctor: number = 0; 
   // วันที่
   ngOnInit() {
     this.currentDate = this.getCurrentThaiDate();
