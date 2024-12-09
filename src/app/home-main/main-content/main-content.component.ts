@@ -21,6 +21,7 @@ export class MainContentComponent implements OnInit {
     const month = String(now.getMonth() + 1).padStart(2, '0');
     const year = now.getFullYear() + 543;
     return `${day}/${month}/${year}`;
+    
   }
 
   // เคลียร์การค้นหา

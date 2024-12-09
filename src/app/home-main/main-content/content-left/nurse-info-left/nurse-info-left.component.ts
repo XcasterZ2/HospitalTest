@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './nurse-info-left.component.scss'
 })
 export class NurseInfoLeftComponent {
-
+  isTreatmentSelected: boolean = false;
 }
