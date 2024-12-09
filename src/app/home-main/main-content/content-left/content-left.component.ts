@@ -9,5 +9,21 @@ export class ContentLeftComponent {
   @Input() selectedButtonIndex: number = 0; // รับค่า selectedButtonIndex จาก parent
   @Input() selectedButtonIndexDoctor: number = 0;
   
-  constructor() { }
+  constructor() {
+
+
+   }
+
+
+   // ... existing code ...
+  isButtonPressed: boolean = false;
+
+  // ฟังก์ชันที่เรียกเมื่อปุ่มถูกกด
+  onButtonClick() {
+    this.isButtonPressed = true;
+  }
+  // ... existing code ...
 }
+
+
+

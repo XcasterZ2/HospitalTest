@@ -25,6 +25,10 @@ import { DoctorScreenLeftComponent } from './home-main/main-content/content-left
 import { FilteringInfomationLeftComponent } from './home-main/main-content/content-left/filtering-infomation-left/filtering-infomation-left.component';
 import { DoctorScreenRightComponent } from './home-main/main-content/content-right/doctor-screen-right/doctor-screen-right.component';
 import { FilteringInfomationRightComponent } from './home-main/main-content/content-right/filtering-infomation-right/filtering-infomation-right.component';
+import { NurseInfoLeftComponent } from './home-main/main-content/content-left/nurse-info-left/nurse-info-left.component';
+import { NursingInfoRightComponent } from './home-main/main-content/content-right/nursing-info-right/nursing-info-right.component';
+
+
 
 
 @NgModule({
@@ -51,6 +55,8 @@ import { FilteringInfomationRightComponent } from './home-main/main-content/cont
     FilteringInfomationLeftComponent,
     DoctorScreenRightComponent,
     FilteringInfomationRightComponent,
+    NurseInfoLeftComponent,
+    NursingInfoRightComponent,
   ],
   imports: [
     BrowserModule,
