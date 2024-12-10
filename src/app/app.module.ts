@@ -27,6 +27,7 @@ import { DoctorScreenRightComponent } from './home-main/main-content/content-rig
 import { FilteringInfomationRightComponent } from './home-main/main-content/content-right/filtering-infomation-right/filtering-infomation-right.component';
 import { NurseInfoLeftComponent } from './home-main/main-content/content-left/nurse-info-left/nurse-info-left.component';
 import { NursingInfoRightComponent } from './home-main/main-content/content-right/nursing-info-right/nursing-info-right.component';
+import { FilteringInformationRigtFemaleComponent } from './home-main/main-content/content-right/filtering-information-rigt-female/filtering-information-rigt-female.component';
 
 
 
@@ -57,6 +58,7 @@ import { NursingInfoRightComponent } from './home-main/main-content/content-righ
     FilteringInfomationRightComponent,
     NurseInfoLeftComponent,
     NursingInfoRightComponent,
+    FilteringInformationRigtFemaleComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,8 @@
 <div *ngIf="selectedButtonIndex === 1 && !isButtonPressed && selectedButtonIndexDoctor !== 1">
     <app-filtering-infomation-left></app-filtering-infomation-left>
 </div>
-<div *ngIf="selectedButtonIndexDoctor === 1">
+<div *ngIf="selectedButtonIndexDoctor === 1 && selectedButtonIndex !== 0">
     <app-nurse-info-left></app-nurse-info-left>
 </div>
+
 

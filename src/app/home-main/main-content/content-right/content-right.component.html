@@ -2,17 +2,16 @@
     <div *ngIf="selectedButtonIndex === 0">
         <app-doctor-screen-right></app-doctor-screen-right>
     </div>
-    <div *ngIf="selectedButtonIndex === 1">
+    <div *ngIf="selectedButtonIndex === 1 && !isButtonPressed && selectedButtonIndexDoctor !== 1">
         <app-filtering-infomation-right></app-filtering-infomation-right>  
     </div>
    
-    <div *ngIf="selectedButtonIndex === 2">
-        <app-doctor-screen-right></app-doctor-screen-right>
-    </div>
-    <div *ngIf="selectedButtonIndexDoctor === 2">
+    <div *ngIf="selectedButtonIndexDoctor === 1 && selectedButtonIndex !== 0">
         <app-nursing-info-right></app-nursing-info-right>
     </div>
-   
+
+    
+
     <div class="content-right-2" style="width: 790px; height: 39px; display: flex; justify-content: space-between; align-items: center;">
         <div style="width: fit-content; height: 39px; gap: 10px; display: flex;">
             <button>
@@ -27,3 +26,6 @@
         </button>
     </div>
 </div>
+
+
+
