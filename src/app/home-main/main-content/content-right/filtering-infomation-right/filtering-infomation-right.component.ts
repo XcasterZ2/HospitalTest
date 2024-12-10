@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './filtering-infomation-right.component.scss'
 })
 export class FilteringInfomationRightComponent {
-
+  
 }

@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-content-right',
@@ -8,15 +8,11 @@ import { Component,Input } from '@angular/core';
 export class ContentRightComponent {
   @Input() selectedButtonIndex: number = 0;
   @Input() selectedButtonIndexDoctor: number = 0;
+  isButtonPressed: boolean = false;
+  isNursingPage: boolean = true;  // เพิ่มตัวแปรนี้
 
+  constructor() { }
 
-
-  // ... existing code ...
-isButtonPressed: boolean = false;
-
-// ฟังก์ชันที่เรียกเมื่อปุ่มถูกกด
-onButtonClick() {
-    this.isButtonPressed = true;
-}
-// ... existing code ...
+  ngOnInit(): void {
+  }
 }
