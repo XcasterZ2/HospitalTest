@@ -6,6 +6,6 @@ import { Router } from '@angular/router';
   styleUrl: './nursing-info-right.component.scss'
 })
 export class NursingInfoRightComponent {
-  isTreatmentSelected: boolean = false;
-    
+  isChecked: boolean = false;
+  inputText: string = '';
 }

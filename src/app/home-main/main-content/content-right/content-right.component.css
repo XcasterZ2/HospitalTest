@@ -1,0 +1,15 @@
+.content-right-2 button {
+  margin: 0;
+  width: 140px;
+  height: 39px;
+  border: 1px solid;
+  padding: 5px;
+  gap: 10px;
+  background-color: #62929E;
+  display: flex;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=content-right.component.css.map */

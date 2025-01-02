@@ -1,30 +1,31 @@
-<div style="width: 790px; height: 100%; padding: 10px 0px; gap: 10px; display: flex; flex-direction: column; ">
-    <div *ngIf="selectedButtonIndex === 0">
+<div class="container-fluid p-2">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 d-flex flex-column gap-2">
+      <div *ngIf="selectedButtonIndex === 0">
         <app-doctor-screen-right></app-doctor-screen-right>
-    </div>
-    <div *ngIf="selectedButtonIndex === 1 && !isButtonPressed && selectedButtonIndexDoctor !== 1">
+      </div>
+      <div *ngIf="selectedButtonIndex === 1 && !isButtonPressed && selectedButtonIndexDoctor !== 1">
         <app-filtering-infomation-right></app-filtering-infomation-right>  
-    </div>
-   
-    <div *ngIf="selectedButtonIndexDoctor === 1 && selectedButtonIndex !== 0">
+      </div>
+      <div *ngIf="selectedButtonIndexDoctor === 1 && selectedButtonIndex !== 0">
         <app-nursing-info-right></app-nursing-info-right>
-    </div>
+      </div>
 
-    
-
-    <div class="content-right-2" style="width: 790px; height: 39px; display: flex; justify-content: space-between; align-items: center;">
-        <div style="width: fit-content; height: 39px; gap: 10px; display: flex;">
-            <button>
-                ↩️️️ Refer Back
-            </button>
-            <button>
-                ⤵️ Refer Out
-            </button>
+      <div class="d-flex justify-content-between align-items-center mt-2">
+        <div class="d-flex gap-2">
+          <button class="btn btn-secondary">
+            ↩️️️ Refer Back
+          </button>
+          <button class="btn btn-secondary">
+            ⤵️ Refer Out
+          </button>
         </div>
-        <button>
-            💾  บันทึก
+        <button class="btn btn-primary">
+          💾 บันทึก
         </button>
+      </div>
     </div>
+  </div>
 </div>
 
 
