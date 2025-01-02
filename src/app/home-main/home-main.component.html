@@ -8,12 +8,19 @@
 </head>
 
 <body>
-    <div class="d-flex justify-content-between" style="width: 112.5rem; height: 59.375rem;">
-        <app-nav-bar></app-nav-bar>
-
-        <app-main-content></app-main-content>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar navigation -->
+            <div class="col-md-3 col-lg-2">
+                <app-nav-bar></app-nav-bar>
+            </div>
+            
+            <!-- Main content -->
+            <div class="col-md-9 col-lg-10">
+                <app-main-content></app-main-content>
+            </div>
+        </div>
     </div>
-
 </body>
 
 </html>

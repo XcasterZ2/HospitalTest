@@ -1,130 +1,174 @@
-<div
-    style="width: 1475px; height: 950px; border-radius: 20px; border: 1px; padding: 30px 10px; gap: 5px; background-color: white; display: flex; flex-direction: column;">
-    <div class="main-first" style="width: 100%; height: 55px; display: flex; justify-content: space-between;">
-        <div style="width: 270px; height: 55px;" class="first-div">
-            <span>วันที่ : </span>
-            <input type="text" [value]="currentDate" style="width: 180px; height: 35px;" readonly>
-        </div>
-        <button>
-            <img src="/img/00.png" alt="" style="width: 45px; height: 45px;">
-        </button>
-        <button>
-            <img src="/img/01.png" alt="" style="width: 45px; height: 45px;">
-        </button>
-        <div style="width: 145px; height: 55px;" class="first-div">
-            <span>VN : </span>
-            <input class="search" type="text" style="width: 80px; height: 35px; ">
-        </div>
-        <div style="width: 200px; height: 55px;" class="first-div">
-            <span>HN : </span>
-            <input class="search" type="text" style="width: 130px; height: 35px; ">
-        </div>
-        <div style="width: 330px; height: 55px;" class="first-div">
-            <span>ID : </span>
-            <input class="search" type="text" style="width: 260px; height: 35px; ">
-        </div>
-        <div
-            style="width: 250px; height: 55px; border-radius: 10px; display: flex; justify-content: space-between; padding: 10px; align-items: center; background-color: #D73431;">
-            <span style="font-size: 16px;  color: white; ">แพ้ยา :</span>
-            <input class="search" type="text" style="width: 170px; border-radius: 8px; height: 35px;">
-        </div>
-        <button style="width: 80; height: 55px; border-radius: 10px; padding: 10px; background-color: #D73431;"
-            (click)="clearSearchInputs()">
-            <span style="font-size: 18px;">Clear</span>
-        </button>
-
-    </div>
-    <div class="main-second" style="width: 100%; height: 56px; display: flex; justify-content: space-between;">
-        <div class="second-div" style="background-color: #23395B;">
-            <div class="second-div-2" style="background-color: white;">
-                <span>BW</span>
+<div class="main-container">
+    <div class="main-first container-fluid">
+        <div class="row g-1 align-items-center flex-nowrap overflow-auto ">
+            <div class="col-auto">
+                <div class="first-div date-input d-flex align-items-center">
+                    <span>วันที่ : </span>
+                    <input type="text" [value]="currentDate">
+                </div>
             </div>
-            <span style="color: white;">0.00</span>
-            <span style="color: white; font-size: 8px;">kg</span>
-        </div>
-        <div class="second-div" style="background-color: #ffffff;">
-            <div class="second-div-2" style="background-color: #23395B;">
-                <span style="color: white;">HT</span>
+            <div class="col-auto">
+                <button class="icon-button">
+                    <img src="/img/00.png" alt="">
+                </button>
             </div>
-            <span style="color: #23395B;">0.00</span>
-            <span style="color: #23395B; font-size: 8px;">kg</span>
-        </div>
-        <div class="second-div" style="background-color: #23395B;">
-            <div class="second-div-2" style="background-color: white;">
-                <span>BMI</span>
+            <div class="col-auto">
+                <button class="icon-button">
+                    <img src="/img/01.png" alt="">
+                </button>
             </div>
-            <span style="color: white;">0.00</span>
-        </div>
-        <div class="second-div" style="background-color: #ffffff;">
-            <div class="second-div-2" style="background-color: #23395B;">
-                <span style="color: white;">T</span>
+            <div class="col-auto">
+                <div class="first-div vn-input d-flex align-items-center">
+                    <span>VN : </span>
+                    <input class="search" type="text">
+                </div>
             </div>
-            <span style="color: #23395B;">0.00</span>
-        </div>
-        <div class="second-div" style="background-color: #23395B;">
-            <div class="second-div-2" style="background-color: white;">
-                <span>BP</span>
+            <div class="col-auto">
+                <div class="first-div hn-input d-flex align-items-center">
+                    <span>HN : </span>
+                    <input class="search" type="text">
+                </div>
             </div>
-            <span style="color: white;">0.00/0.00</span>
-        </div>
-        <div class="second-div" style="background-color: #ffffff;">
-            <div class="second-div-2" style="background-color: #23395B;">
-                <span style="color: white;">PR</span>
+            <div class="col-auto">
+                <div class="first-div id-input d-flex align-items-center">
+                    <span>ID : </span>
+                    <input class="search" type="text">
+                </div>
             </div>
-            <span style="color: #23395B;">0.00</span>
-            <span style="color: #23395B; font-size: 8px;">bmp</span>
-        </div>
-        <div class="second-div" style="background-color: #23395B;">
-            <div class="second-div-2" style="background-color: white;">
-                <span>RP</span>
+            <div class="col-auto">
+                <div class="first-div drug-allergy d-flex align-items-center">
+                    <span>แพ้ยา :</span>
+                    <input class="search" type="text">
+                </div>
             </div>
-            <span style="color: white;">0.00</span>
-            <span style="color: #ffffff; font-size: 8px;">bmp</span>
-        </div>
-        <div class="second-div" style="background-color: #ffffff;">
-            <div class="second-div-2" style="background-color: #23395B;">
-                <span style="color: white;">OFC</span>
+            <div class="col-auto">
+                <button class="clear-button" (click)="clearSearchInputs()">
+                    <span>Clear</span>
+                </button>
             </div>
-            <span style="color: #23395B;">0.00</span>
-            <span style="color: #23395B; font-size: 8px;">cm</span>
-        </div>
-        <div class="second-div" style="background-color: #23395B;">
-            <div class="second-div-2" style="background-color: white;">
-                <span>BSA</span>
-            </div>
-            <span style="color: white;">0.00</span>
-            <span style="color: #ffffff; font-size: 8px;">m2</span>
-        </div>
-        <div class="second-div" style="background-color: #ffffff;">
-            <div class="second-div-2" style="background-color: #23395B;">
-                <span style="color: white;">ANC</span>
-            </div>
-            <span style="color: #23395B;">0.00</span>
-            <span style="color: #23395B; font-size: 8px;">m2</span>
         </div>
     </div>
-    <div class="main-third" style="width: 100%; height: 40px; display: flex; justify-content: space-between;">
-        <button *ngFor="let button of buttons; let i = index" class="third-div"
-            [class.active]="selectedButtonIndex === i" (click)="onButtonClick(i)">
-            <span>{{ button }}</span>
-        </button>
+    <div class="main-second">
+        <div class="row g-2 align-items-center flex-nowrap overflow-auto hide-scrollbar">
+            <div class="col-auto">
+                <div class="second-div" style="background-color: #23395B;">
+                    <div class="second-div-2" style="background-color: white;">
+                        <span>BW</span>
+                    </div>
+                    <span style="color: white;">0.00</span>
+                    <span style="color: white; font-size: 8px;">kg</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="second-div" style="background-color: #ffffff;">
+                    <div class="second-div-2" style="background-color: #23395B;">
+                        <span style="color: white;">HT</span>
+                    </div>
+                    <span style="color: #23395B;">0.00</span>
+                    <span style="color: #23395B; font-size: 8px;">kg</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="second-div" style="background-color: #23395B;">
+                    <div class="second-div-2" style="background-color: white;">
+                        <span>BMI</span>
+                    </div>
+                    <span style="color: white;">0.00</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="second-div" style="background-color: #ffffff;">
+                    <div class="second-div-2" style="background-color: #23395B;">
+                        <span style="color: white;">T</span>
+                    </div>
+                    <span style="color: #23395B;">0.00</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="second-div" style="background-color: #23395B;">
+                    <div class="second-div-2" style="background-color: white;">
+                        <span>BP</span>
+                    </div>
+                    <span style="color: white;">0.00/0.00</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="second-div" style="background-color: #ffffff;">
+                    <div class="second-div-2" style="background-color: #23395B;">
+                        <span style="color: white;">PR</span>
+                    </div>
+                    <span style="color: #23395B;">0.00</span>
+                    <span style="color: #23395B; font-size: 8px;">bmp</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="second-div" style="background-color: #23395B;">
+                    <div class="second-div-2" style="background-color: white;">
+                        <span>RP</span>
+                    </div>
+                    <span style="color: white;">0.00</span>
+                    <span style="color: #ffffff; font-size: 8px;">bmp</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="second-div" style="background-color: #ffffff;">
+                    <div class="second-div-2" style="background-color: #23395B;">
+                        <span style="color: white;">OFC</span>
+                    </div>
+                    <span style="color: #23395B;">0.00</span>
+                    <span style="color: #23395B; font-size: 8px;">cm</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="second-div" style="background-color: #23395B;">
+                    <div class="second-div-2" style="background-color: white;">
+                        <span>BSA</span>
+                    </div>
+                    <span style="color: white;">0.00</span>
+                    <span style="color: #ffffff; font-size: 8px;">m2</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="second-div" style="background-color: #ffffff;">
+                    <div class="second-div-2" style="background-color: #23395B;">
+                        <span style="color: white;">ANC</span>
+                    </div>
+                    <span style="color: #23395B;">0.00</span>
+                    <span style="color: #23395B; font-size: 8px;">m2</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="doctor-screen" *ngIf="selectedButtonIndex === 1"
-        style="width: 100%; height: 40px; display: flex; justify-content: flex-start; gap: 10px;">
-        <button *ngFor="let button of buttons2; let i = index" class="doctor-screen-btn"
-            [class.active]="selectedButtonIndexDoctor === i" (click)="onButtonClickDoctor(i)">
-            <span>{{ button }}</span>
-        </button>
+    <div class="main-third row g-1 align-items-center flex-nowrap overflow-auto">
+        <div class="col-auto" *ngFor="let button of buttons; let i = index">
+            <button class="third-div" 
+                [class.active]="selectedButtonIndex === i" 
+                (click)="onButtonClick(i)">
+                <span>{{ button }}</span>
+            </button>
+        </div>
     </div>
-    <div style="width: 100%; height: 100%; display: flex; justify-content: space-between;">
-        <!-- <app-content-left *ngIf="selectedButtonIndex === 0"></app-content-left> 
-        <app-content-right *ngIf="selectedButtonIndex === 0"></app-content-right> -->
-        <app-content-left [selectedButtonIndex]="selectedButtonIndex"
-            [selectedButtonIndexDoctor]="selectedButtonIndexDoctor">
-        </app-content-left>
-        <app-content-right [selectedButtonIndex]="selectedButtonIndex"
-            [selectedButtonIndexDoctor]="selectedButtonIndexDoctor">
-        </app-content-right>
-
+    <div class="doctor-screen row g-1 align-items-center flex-nowrap overflow-auto" *ngIf="selectedButtonIndex === 1">
+        <div class="col-auto" *ngFor="let button of buttons2; let i = index">
+            <button class="doctor-screen-btn text-nowrap"
+                [class.active]="selectedButtonIndexDoctor === i" 
+                (click)="onButtonClickDoctor(i)">
+                <span>{{ button }}</span>
+            </button>
+        </div>
+    </div>
+    <div class="row g-2">
+        <div class="col-12 col-md-6">
+            <app-content-left 
+                [selectedButtonIndex]="selectedButtonIndex"
+                [selectedButtonIndexDoctor]="selectedButtonIndexDoctor">
+            </app-content-left>
+        </div>
+        <div class="col-12 col-md-6">
+            <app-content-right 
+                [selectedButtonIndex]="selectedButtonIndex"
+                [selectedButtonIndexDoctor]="selectedButtonIndexDoctor">
+            </app-content-right>
+        </div>
     </div>
 </div>

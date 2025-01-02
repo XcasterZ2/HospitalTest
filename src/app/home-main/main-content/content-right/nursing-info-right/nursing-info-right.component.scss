@@ -13,22 +13,18 @@
         border-radius: 5px;
         border: 1px solid #000;
         font-weight: 700;
+        transition: all 0.3s ease; 
 
 
+        &:hover {
+            background-color: #4b7fd6; // สีเข้มขึ้นเมื่อ hover
+            transform: translateY(-1px); // ยกขึ้นเล็กน้อยเมื่อ hover
+        }
 
-            .btn-hover-active1 {
-                transition: background-color 0.3s, color 0.3s;
-            }
-            
-            .btn-hover-active1:hover {
-                background-color: #007BFF; /* Change to your desired hover color */
-                color: white; /* Change to your desired hover text color */
-            }
-            
-            .btn-hover-active1:active {
-                background-color: #0056b3; /* Change to your desired active color */
-                color: white; /* Change to your desired active text color */
-            }
+        &:active {
+            background-color: #3666b8; // สีเข้มขึ้นอีกเมื่อกด
+            transform: translateY(1px); // กดลงเล็กน้อยเมื่อคลิก
+        }
         
         } 
     }
@@ -127,9 +123,10 @@
 .anothor_box{
     width: 770px;
     height: 29px;
-    gap: 5px;
+    gap: 10px;
     display: flex;
     align-items: center;
+    padding-top: inherit;
 
 
     .anothor_box_left{
@@ -159,12 +156,20 @@
         display: flex;
     }
 
-    input{
+    input[type="text"] {
         width: 570px;
         height: 29px;
         border-radius: 5px;
         border: 1px solid #000;
         background-color: #FFFFFF;
+
+        &:disabled {
+            background-color: #E5E5E5;
+        }
+
+        &:enabled {
+            background-color: #FFFFFF;
+        }
     }
 }
 
@@ -203,3 +208,6 @@
         color: white; /* Change to your desired active text color */
     }
 }
+
+
+

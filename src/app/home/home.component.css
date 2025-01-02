@@ -1,0 +1,33 @@
+.app {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+.app .zone1 {
+  width: 300px;
+  display: flex;
+}
+.app .zone1 .side-bar {
+  position: relative;
+  flex: 1;
+}
+.app .zone2 {
+  flex: 1;
+  background-color: #ff0000;
+  display: flex;
+  flex-direction: column;
+}
+.app .zone2 .header {
+  width: 100%;
+  min-height: 100px;
+  background-color: #00ff00;
+}
+.app .zone2 .content {
+  flex: 1;
+  background-color: #0000ff;
+}/*# sourceMappingURL=home.component.css.map */

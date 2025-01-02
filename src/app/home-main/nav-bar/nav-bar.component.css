@@ -1,0 +1,86 @@
+button {
+  background: none;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  transform: translateY(-1px);
+}
+
+/* Custom Styles for Mobile Navbar */
+@media (max-width: 992px) { /* Adjust breakpoint as needed */
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    transition: all 0.3s;
+  }
+
+  .navbar-toggler.collapsed .navbar-toggler-icon {
+    transform: rotate(0deg);
+  }
+
+  /* Adjust other elements as necessary */
+}
+
+/* Optional: Customize modal image */
+.modal-body img {
+  max-height: 80vh;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1045;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.sidebar-content {
+  height: 100vh;
+  width: 100%;
+  max-width: 295px;
+}
+
+.scrollable-content {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar styling */
+.scrollable-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}/*# sourceMappingURL=nav-bar.component.css.map */

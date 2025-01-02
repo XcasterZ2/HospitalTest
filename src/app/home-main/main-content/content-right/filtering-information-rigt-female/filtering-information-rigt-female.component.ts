@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './filtering-information-rigt-female.component.scss'
 })
 export class FilteringInformationRigtFemaleComponent {
+    
 
-}
+  }

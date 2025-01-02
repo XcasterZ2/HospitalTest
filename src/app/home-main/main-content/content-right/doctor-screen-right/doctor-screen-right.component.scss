@@ -15,16 +15,22 @@
         align-items: center;
         border: 1px solid black;
     
-        
+        transition: all 0.3s ease; // เพิ่ม transition เพื่อให้การเปลี่ยนแปลงดูนุ่มนวล
+
+        &:hover {
+            background-color: #4b7fd6; // สีเข้มขึ้นเมื่อ hover
+            transform: translateY(-1px); // ยกขึ้นเล็กน้อยเมื่อ hover
+        }
+
+        &:active {
+            background-color: #3666b8; // สีเข้มขึ้นอีกเมื่อกด
+            transform: translateY(1px); // กดลงเล็กน้อยเมื่อคลิก
+        }
+       
     }
     
-    .active{
-        height: 40px;
-        border: none;
-    }
     
     .forth-div-right{
-        width: 770px;
         border-radius: 10px; 
         display: flex; 
         flex-direction: column; 
