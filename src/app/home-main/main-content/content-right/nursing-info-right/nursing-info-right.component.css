@@ -158,4 +158,9 @@
 .nursing_last_btn .btn-hover-active:active {
   background-color: #0056b3; /* Change to your desired active color */
   color: white; /* Change to your desired active text color */
+}
+
+.input-inline {
+    flex: 1;
+    max-width: 300px;
 }/*# sourceMappingURL=nursing-info-right.component.css.map */

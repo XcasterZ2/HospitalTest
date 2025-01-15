@@ -4,42 +4,71 @@
             <div class="col-auto">
                 <div class="first-div date-input d-flex align-items-center">
                     <span>วันที่ : </span>
-                    <input type="text" [value]="currentDate">
+                    <input type="text" [value]="currentDate" readonly>
                 </div>
             </div>
             <div class="col-auto">
-                <button class="icon-button">
-                    <img src="/img/00.png" alt="">
+                <!-- <button class="icon-button">
+                    <img src="/img/your-icon.png" alt="Icon description">
                 </button>
             </div>
             <div class="col-auto">
                 <button class="icon-button">
-                    <img src="/img/01.png" alt="">
-                </button>
+                    <img src="/img/01.png" alt="Icon 01">
+                </button> -->
             </div>
             <div class="col-auto">
                 <div class="first-div vn-input d-flex align-items-center">
                     <span>VN : </span>
-                    <input class="search" type="text">
+                    <input 
+                        class="search" 
+                        type="text" 
+                        [(ngModel)]="searchCriteria.vn" 
+                        (keyup.enter)="searchData()" 
+                        [readonly]="patientData?.vn"
+                        placeholder="Enter VN">
                 </div>
             </div>
             <div class="col-auto">
                 <div class="first-div hn-input d-flex align-items-center">
                     <span>HN : </span>
-                    <input class="search" type="text">
+                    <input 
+                        class="search" 
+                        type="text" 
+                        [(ngModel)]="searchCriteria.hn" 
+                        (keyup.enter)="searchData()" 
+                        [readonly]="patientData?.hn"
+                        placeholder="Enter HN">
                 </div>
             </div>
             <div class="col-auto">
                 <div class="first-div id-input d-flex align-items-center">
                     <span>ID : </span>
-                    <input class="search" type="text">
+                    <input 
+                        class="search" 
+                        type="text" 
+                        [(ngModel)]="searchCriteria.id" 
+                        (keyup.enter)="searchData()" 
+                        [readonly]="patientData?.id"
+                        placeholder="Enter ID">
                 </div>
             </div>
             <div class="col-auto">
                 <div class="first-div drug-allergy d-flex align-items-center">
                     <span>แพ้ยา :</span>
-                    <input class="search" type="text">
+                    <input 
+                        class="search" 
+                        type="text" 
+                        [(ngModel)]="searchCriteria.drugAllergy" 
+                        (keyup.enter)="searchData()" 
+                        [readonly]="patientData?.drugAllergy"
+                        placeholder="Enter Drug Allergy">
                 </div>
+            </div>
+            <div class="col-auto">
+                <button class="search-button" (click)="searchData()">
+                    <span>ค้นหา</span>
+                </button>
             </div>
             <div class="col-auto">
                 <button class="clear-button" (click)="clearSearchInputs()">
@@ -171,4 +200,15 @@
             </app-content-right>
         </div>
     </div>
+    <!-- Remove or comment out the existing search-result div -->
+    <!--
+    <div *ngIf="patientData" class="search-result">
+        <h3>ข้อมูลผู้ป่วย</h3>
+        <p>ชื่อ: {{ patientData.name }}</p>
+        <p>VN: {{ patientData.vn }}</p>
+        <p>HN: {{ patientData.hn }}</p>
+        <p>ID: {{ patientData.id }}</p>
+        <p>แพ้ยา: {{ patientData.drugAllergy }}</p>
+    </div>
+    -->
 </div>

@@ -17,3 +17,24 @@
         align-items: center;
     }
 }
+
+.custom-btn {
+    background-color: #62929E;
+    color: white;
+    border: none;
+    
+    &:hover {
+      background-color: #557c86;
+      color: white;
+    }
+    
+    &:active {
+      background-color: #4b6f78 !important;
+      color: white !important;
+    }
+  }
+  
+  .custom-btn-primary {
+    @extend .custom-btn;
+    background-color: #62929E;
+  }

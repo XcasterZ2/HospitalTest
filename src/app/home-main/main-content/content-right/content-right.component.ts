@@ -15,4 +15,6 @@ export class ContentRightComponent {
 
   ngOnInit(): void {
   }
+
+  
 }

@@ -14,6 +14,9 @@ const routes: Routes = [
     ],
   },
   { path: '**', redirectTo: 'home-main', pathMatch: 'full' }, // แก้เส้นทางไม่พบให้ไปที่ /home
+
+
+
 ];
 
 @NgModule({

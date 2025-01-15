@@ -1,13 +1,12 @@
 <div style=" height: 100%; padding: 10px; gap: 10px; display: flex; flex-direction: column; ">
 
-    <div class="content-left-1" style="width: 100%; height: 310px; background-color: #D9D9D9; border-radius: 20px; padding: 10px; box-shadow: 0px 4px 4px 0px #00000040;
-display: flex; flex-direction: column;">
-        <div
-            style="width: 100%; height: 30px; border-radius: 20px; display: flex; align-items: center; justify-content: center; background-color: #475974;">
-            <span style="font-weight: 700; font-size: 20px; color: white;">ใบสั่งยา</span>
+    <div class="content-left-1" style="width: 100%; min-height: 310px; background-color: #D9D9D9; border-radius: 20px; padding: 10px; box-shadow: 0px 4px 4px 0px #00000040;
+display: flex; flex-direction: column; overflow-y: auto;">
+         <div class="rounded-4 py-2 mb-3" style="background-color: #475974;">
+            <h5 class="text-white text-center fw-bold mb-0">ใบสั่งยา</h5>
         </div>
         <div
-            style="width: 100%; height: 100%; background-color: white; border-radius: 20px; padding: 10px; gap: 10px; display: flex;">
+            style="width: 600px; height: 100%; background-color: white; border-radius: 20px; padding: 10px; gap: 10px; display: flex;">
             <div style="width: 500px; height: 100%;  gap: 5px; display: flex; flex-direction: column; ">
                 <div class="forth-div-content">
                     <span style="width: 100px;">คลินิก : </span>
@@ -118,294 +117,176 @@ display: flex; flex-direction: column;">
 
     </div>
 
-    <div class="content-left-2"
-        style="width: 620px; height: 145px; overflow: scroll; box-shadow: 0px 4px 4px 0px #00000040;">
-        <table>
+    <div class="content-left-2 table-responsive" style="height: 145px;">
+        <table class="table table-bordered table-hover mb-0">
             <thead>
-                <tr>
-                    <th>No .</th>
-                    <th>Clinic</th>
-                    <th>Doctor</th>
-                    <th>Right</th>
-                    <th>SSB</th>
-                    <th>UC</th>
-                    <th>วันยื่นเช็คชื่อ</th>
+                <tr class="bg-secondary text-white">
+                    <th scope="col" class="text-nowrap" style="width: 50px;">No.</th>
+                    <th scope="col" class="text-nowrap">Clinic</th>
+                    <th scope="col" class="text-nowrap">Doctor</th>
+                    <th scope="col" class="text-nowrap">Right</th>
+                    <th scope="col" class="text-nowrap">SSB</th>
+                    <th scope="col" class="text-nowrap">UC</th>
+                    <th scope="col" class="text-nowrap">วันยื่นเช็คชื่อ</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>test</td>
-                    <td>aaa</td>
-                    <td>bbb</td>
-                    <td>ccc</td>
-                    <td>ddd</td>
-                    <td>10/10/10</td>
+                    <td class="text-nowrap" style="width: 50px;">1</td>
+                    <td class="text-truncate" style="max-width: 150px;">test</td>
+                    <td class="text-truncate" style="max-width: 150px;">aaa</td>
+                    <td class="text-truncate" style="max-width: 150px;">bbb</td>
+                    <td class="text-truncate" style="max-width: 150px;">ccc</td>
+                    <td class="text-truncate" style="max-width: 150px;">ddd</td>
+                    <td class="text-nowrap">10/10/10</td>
                 </tr>
+                <!-- ... rows อื่นๆ ... -->
+            </tbody>
+            <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>testddddddddddddddddd</td>
-                    <td>aaaddddddddddddddddddddd</td>
-                    <td>bbbddddddddddddddddddd</td>
-                    <td>cccddddddddddddddd</td>
-                    <td>dddddddddddddddddddddddddddddddddd</td>
-                    <td>10/10/10</td>
+                    <td class="text-nowrap" style="width: 50px;">1</td>
+                    <td class="text-truncate" style="max-width: 150px;">test</td>
+                    <td class="text-truncate" style="max-width: 150px;">aaa</td>
+                    <td class="text-truncate" style="max-width: 150px;">bbb</td>
+                    <td class="text-truncate" style="max-width: 150px;">ccc</td>
+                    <td class="text-truncate" style="max-width: 150px;">ddd</td>
+                    <td class="text-nowrap">10/10/10</td>
                 </tr>
+                <!-- ... rows อื่นๆ ... -->
+            </tbody>
+            <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>test</td>
-                    <td>aaa</td>
-                    <td>bbb</td>
-                    <td>ccc</td>
-                    <td>ddd</td>
-                    <td>10/10/10</td>
+                    <td class="text-nowrap" style="width: 50px;">1</td>
+                    <td class="text-truncate" style="max-width: 150px;">test</td>
+                    <td class="text-truncate" style="max-width: 150px;">aaa</td>
+                    <td class="text-truncate" style="max-width: 150px;">bbb</td>
+                    <td class="text-truncate" style="max-width: 150px;">ccc</td>
+                    <td class="text-truncate" style="max-width: 150px;">ddd</td>
+                    <td class="text-nowrap">10/10/10</td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>test</td>
-                    <td>aaa</td>
-                    <td>bbb</td>
-                    <td>ccc</td>
-                    <td>ddd</td>
-                    <td>10/10/10</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>test</td>
-                    <td>aaa</td>
-                    <td>bbb</td>
-                    <td>ccc</td>
-                    <td>ddd</td>
-                    <td>10/10/10</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>test</td>
-                    <td>aaa</td>
-                    <td>bbb</td>
-                    <td>ccc</td>
-                    <td>ddd</td>
-                    <td>10/10/10</td>
-                </tr>
-
+                <!-- ... rows อื่นๆ ... -->
             </tbody>
         </table>
     </div>
 
-    <div class="content-left-3"
-        style="width: 100%; height: 214px; border-radius: 20px; padding: 10px; display: flex; flex-direction: column; gap: 10px; background-color: #d9d9d9; box-shadow: 0px 4px 4px 0px #00000040;">
-        <div
-            style="width: 100%; height: 30px; border-radius: 20px; display: flex; align-items: center; justify-content: center; background-color: #475974;">
-            <span style="font-weight: 700; font-size: 20px; color: white;">PE</span>
+    <div class="content-left-3 p-3 bg-light rounded-4 shadow">
+        <!-- Header -->
+        <div class="rounded-4 py-2 mb-3" style="background-color: #475974;">
+            <h5 class="text-white text-center fw-bold mb-0">PE</h5>
         </div>
-        <div style="width: 100%; height: 154px; display: flex; padding: 10px;">
 
-            <!-- checkbox -->
-            <!-- <div style="display: flex; justify-content: space-between; flex-direction: column; width: 220px;">
-            <div class="check_menu">
-                <span>Heent</span>
-                <div class="check-choice">
-                    <label>
-                        <input type="checkbox" name="A" value="A">
-                        A
-                    </label>
-                    <label>
-                        <input type="checkbox" name="N" value="N">
-                        N
-                    </label>
-                </div>
-
-            </div>
-            <div class="check_menu">
-                <span>Chest/Lung</span>
-                <div class="check-choice">
-                    <label>
-                        <input type="checkbox" name="A" value="A">
-                        A
-                    </label>
-                    <label>
-                        <input type="checkbox" name="N" value="N">
-                        N
-                    </label>
-                </div>
-
-            </div>
-            <div class="check_menu">
-                <span>Heart</span>
-                <div class="check-choice">
-                    <label>
-                        <input type="checkbox" name="A" value="A">
-                        A
-                    </label>
-                    <label>
-                        <input type="checkbox" name="N" value="N">
-                        N
-                    </label>
-                </div>
-
-            </div>
-            <div class="check_menu">
-                <span>Abdomen</span>
-                <div class="check-choice">
-                    <label>
-                        <input type="checkbox" name="A" value="A">
-                        A
-                    </label>
-                    <label>
-                        <input type="checkbox" name="N" value="N">
-                        N
-                    </label>
-                </div>
-
-            </div>
-            <div class="check_menu">
-                <span>Extremity</span>
-                <div class="check-choice">
-                    <label>
-                        <input type="checkbox" name="A" value="A">
-                        A
-                    </label>
-                    <label>
-                        <input type="checkbox" name="N" value="N">
-                        N
-                    </label>
-                </div>
-
-            </div>
-            <div class="check_menu">
-                <span>Neuro</span>
-                <div class="check-choice">
-                    <label>
-                        <input type="checkbox" name="A" value="A">
-                        A
-                    </label>
-                    <label>
-                        <input type="checkbox" name="N" value="N">
-                        N
-                    </label>
-                </div>
-
-            </div>
-            <div class="check_menu">
-                <span>Breast</span>
-                <div class="check-choice">
-                    <label>
-                        <input type="checkbox" name="A" value="A">
-                        A
-                    </label>
-                    <label>
-                        <input type="checkbox" name="N" value="N">
-                        N
-                    </label>
-                </div>
-
-            </div>
-        </div> -->
-
-            <!-- radio -->
-            <div style="display: flex; justify-content: space-between; flex-direction: column; width: 220px;">
-                <div class="check_menu">
-                    <span>Heent</span>
-                    <div class="check-choice">
-                        <label>
-                            <input type="radio" name="heent" value="A" (change)="onPEChange('Heent', 'A')">
-                            A
-                        </label>
-                        <label>
-                            <input type="radio" name="heent" value="N" (change)="onPEChange('Heent', 'N')">
-                            N
-                        </label>
+        <!-- Content -->
+        <div class="row g-3">
+            <!-- Radio buttons column -->
+            <div class="col-12 col-md-4">
+                <div class="d-flex flex-column gap-2">
+                    <!-- Heent -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Heent</span>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="heent" id="heentA" value="A" 
+                                   (change)="onPEChange('Heent', 'A')">
+                            <label class="btn btn-outline-primary btn-sm" for="heentA">A</label>
+                            
+                            <input type="radio" class="btn-check" name="heent" id="heentN" value="N"
+                                   (change)="onPEChange('Heent', 'N')">
+                            <label class="btn btn-outline-primary btn-sm" for="heentN">N</label>
+                        </div>
                     </div>
-                </div>
-                <div class="check_menu">
-                    <span>Chest/Lung</span>
-                    <div class="check-choice">
-                        <label>
-                            <input type="radio" name="chest_lung" value="A" (change)="onPEChange('chest_lung', 'A')">
-                            A
-                        </label>
-                        <label>
-                            <input type="radio" name="chest_lung" value="N" (change)="onPEChange('chest_lung', 'N')">
-                            N
-                        </label>
+
+                    <!-- Repeat similar pattern for other options -->
+                    <!-- Example for Chest/Lung (repeat for others) -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Chest/Lung</span>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="chest_lung" id="chestA" value="A"
+                                   (change)="onPEChange('chest_lung', 'A')">
+                            <label class="btn btn-outline-primary btn-sm" for="chestA">A</label>
+                            
+                            <input type="radio" class="btn-check" name="chest_lung" id="chestN" value="N"
+                                   (change)="onPEChange('chest_lung', 'N')">
+                            <label class="btn btn-outline-primary btn-sm" for="chestN">N</label>
+                        </div>
                     </div>
-                </div>
-                <div class="check_menu">
-                    <span>Heart</span>
-                    <div class="check-choice">
-                        <label>
-                            <input type="radio" name="heart" value="A" (change)="onPEChange('heart', 'A')">
-                            A
-                        </label>
-                        <label>
-                            <input type="radio" name="heart" value="N" (change)="onPEChange('heart', 'N')">
-                            N
-                        </label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Heart</span>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="Heart" id="HeartA" value="A"
+                                   (change)="onPEChange('Heart', 'A')">
+                            <label class="btn btn-outline-primary btn-sm" for="HeartA">A</label>
+                            
+                            <input type="radio" class="btn-check" name="Heart" id="HeartN" value="N"
+                                   (change)="onPEChange('Heart', 'N')">
+                            <label class="btn btn-outline-primary btn-sm" for="HeartN">N</label>
+                        </div>
                     </div>
-                </div>
-                <div class="check_menu">
-                    <span>Abdomen</span>
-                    <div class="check-choice">
-                        <label>
-                            <input type="radio" name="abdomen" value="A" (change)="onPEChange('heart', 'A')">
-                            A
-                        </label>
-                        <label>
-                            <input type="radio" name="abdomen" value="N" (change)="onPEChange('heart', 'N')">
-                            N
-                        </label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Abdomen</span>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="Abdomen" id="AbdomenA" value="A"
+                                   (change)="onPEChange('Abdomen', 'A')">
+                            <label class="btn btn-outline-primary btn-sm" for="AbdomenA">A</label>
+                            
+                            <input type="radio" class="btn-check" name="Abdomen" id="AbdomenN" value="N"
+                                   (change)="onPEChange('Abdomen', 'N')">
+                            <label class="btn btn-outline-primary btn-sm" for="AbdomenN">N</label>
+                        </div>
                     </div>
-                </div>
-                <div class="check_menu">
-                    <span>Extremity</span>
-                    <div class="check-choice">
-                        <label>
-                            <input type="radio" name="extremity" value="A" (change)="onPEChange('heart', 'A')">
-                            A
-                        </label>
-                        <label>
-                            <input type="radio" name="extremity" value="N" (change)="onPEChange('heart', 'N')">
-                            N
-                        </label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Extreminy</span>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="Extreminy" id="ExtreminyA" value="A"
+                                   (change)="onPEChange('Extreminy', 'A')">
+                            <label class="btn btn-outline-primary btn-sm" for="ExtreminyA">A</label>
+                            
+                            <input type="radio" class="btn-check" name="Extreminy" id="ExtreminyN" value="N"
+                                   (change)="onPEChange('Extreminy', 'N')">
+                            <label class="btn btn-outline-primary btn-sm" for="ExtreminyN">N</label>
+                        </div>
                     </div>
-                </div>
-                <div class="check_menu">
-                    <span>Neuro</span>
-                    <div class="check-choice">
-                        <label>
-                            <input type="radio" name="neuro" value="A" (change)="onPEChange('heart', 'A')">
-                            A
-                        </label>
-                        <label>
-                            <input type="radio" name="neuro" value="N" (change)="onPEChange('heart', 'N')">
-                            N
-                        </label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Neuro</span>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="Neuro" id="NeuroA" value="A"
+                                   (change)="onPEChange('Neuro', 'A')">
+                            <label class="btn btn-outline-primary btn-sm" for="NeuroA">A</label>
+                            
+                            <input type="radio" class="btn-check" name="Neuro" id="NeuroN" value="N"
+                                   (change)="onPEChange('Neuro', 'N')">
+                            <label class="btn btn-outline-primary btn-sm" for="NeuroN">N</label>
+                        </div>
                     </div>
-                </div>
-                <div class="check_menu">
-                    <span>Breast</span>
-                    <div class="check-choice">
-                        <label>
-                            <input type="radio" name="breast" value="A" (change)="onPEChange('heart', 'A')">
-                            A
-                        </label>
-                        <label>
-                            <input type="radio" name="breast" value="N" (change)="onPEChange('heart', 'N')">
-                            N
-                        </label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Breast</span>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="Breast" id="BreastA" value="A"
+                                   (change)="onPEChange('Breast', 'A')">
+                            <label class="btn btn-outline-primary btn-sm" for="BreastA">A</label>
+                            
+                            <input type="radio" class="btn-check" name="Breast" id="BreastN" value="N"
+                                   (change)="onPEChange('Breast', 'N')">
+                            <label class="btn btn-outline-primary btn-sm" for="BreastN">N</label>
+                        </div>
                     </div>
+                    <!-- ... Add other radio groups similarly ... -->
                 </div>
             </div>
 
-            <div
-                style="display: flex; flex-direction: column; align-items: center; gap: 20px; justify-content: center; width: 100%;">
-                <div style="height: 168px; background-color: #FFFFFF; width: 300px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);">
-                    
-                    <textarea  [(ngModel)]="peText" style="outline: none; background-color: transparent; width: 100%; height: 100%; resize: none; padding: 10px; border: none;"></textarea>
+            <!-- Textarea column -->
+            <div class="col-12 col-md-8">
+                <div class="d-flex flex-column gap-3">
+                    <div class="form-floating">
+                        <textarea class="form-control shadow-sm" 
+                                [(ngModel)]="peText"
+                                style="height: 150px"
+                                placeholder="Enter PE text"></textarea>
+                        <label>PE Notes</label>
+                    </div>
+                    <small class="text-danger text-center text-decoration-underline d-none d-md-block">
+                        คำช่วยกด F9, กลุ่มคำช่วยกด F10
+                    </small>
                 </div>
-                <span style="color: #B80707; text-decoration: underline; ">คำช่วยกด F9, กลุ่มคำช่วยกด F10</span>
             </div>
-
         </div>
     </div>
 </div>

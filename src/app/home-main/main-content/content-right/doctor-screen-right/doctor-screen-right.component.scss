@@ -1,4 +1,12 @@
 .content-right-1{
+    /* ซ่อน scrollbar แต่ยังสามารถ scroll ได้ */
+div {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  div::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
     button {
         padding: 0;
         margin: 0;

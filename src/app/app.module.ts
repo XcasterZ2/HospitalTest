@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms'; // เพิ่ม FormsModule
+import { HttpClientModule } from '@angular/common/http'; // สำหรับ HTTP requests
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,9 +32,8 @@ import { FilteringInfomationRightComponent } from './home-main/main-content/cont
 import { NurseInfoLeftComponent } from './home-main/main-content/content-left/nurse-info-left/nurse-info-left.component';
 import { NursingInfoRightComponent } from './home-main/main-content/content-right/nursing-info-right/nursing-info-right.component';
 import { FilteringInformationRigtFemaleComponent } from './home-main/main-content/content-right/filtering-information-rigt-female/filtering-information-rigt-female.component';
-
-
-
+import { environment } from '../environments/environment';
+import { MainContentService } from './home-main/main-content/main-content.service';
 
 @NgModule({
   declarations: [
@@ -64,11 +67,13 @@ import { FilteringInformationRigtFemaleComponent } from './home-main/main-conten
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [MainContentService],
   bootstrap: [AppComponent]
 })
-
 
 export class AppModule { }
