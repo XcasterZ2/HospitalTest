@@ -54,6 +54,8 @@
         align-items: center;
         border: 1px solid black;
     }
+
+    
 }
 
 .content-left-2 {
@@ -137,3 +139,28 @@ button:hover{
     transform: translateY(-1px);
 }
   
+.btn-outline-primary {
+    border-color: #475974;
+    color: #475974;
+    
+    &:hover {
+      background-color: #475974;
+      color: white;
+      border-color: #475974;
+    }
+    
+    &:active,
+    &:checked,
+    &.active {
+      background-color: #475974 !important;
+      color: white !important;
+      border-color: #475974 !important;
+    }
+  }
+  
+  // สำหรับปุ่มที่ถูกเลือก (checked)
+  .btn-check:checked + .btn-outline-primary {
+    background-color: #475974;
+    color: white;
+    border-color: #475974;
+  }

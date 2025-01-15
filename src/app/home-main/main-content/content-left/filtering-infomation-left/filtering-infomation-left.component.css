@@ -5,4 +5,18 @@ button {
 button:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   transform: translateY(-1px);
-}/*# sourceMappingURL=filtering-infomation-left.component.css.map */
+}
+
+.content-left-1 {
+  max-width: 650px;
+  overflow-x: auto;
+}
+
+.d-flex.flex-nowrap.overflow-auto {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}

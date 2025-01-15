@@ -9,7 +9,9 @@
 <div class="sidebar" [class.show]="isSidebarOpen">
   <div class="card bg-white rounded-4 border p-4 sidebar-content">
     <div class="scrollable-content">
-      <span class="text-center fs-4 fw-bold mb-4">นายมั่งมี ศรีสุข</span>
+      <div class="d-flex justify-content-center">
+        <span class="text-center fs-4 fw-bold mb-4">{{ userName }}</span>
+      </div>
       
       <div class="d-flex flex-column mb-4">
         <div class="d-flex justify-content-center align-items-center overflow-hidden mb-2" style="height: 200px;">

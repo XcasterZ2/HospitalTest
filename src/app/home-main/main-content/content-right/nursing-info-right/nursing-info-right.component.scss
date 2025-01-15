@@ -209,5 +209,36 @@
     }
 }
 
+.custom-btn {
+    background-color: #619AF2;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #4b7bc2;  /* สีที่เข้มขึ้นเมื่อ hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hover-effect {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+}
+
+.custom-save-btn {
+  background-color: #62929E;
+  color: white;
+  
+  &:hover {
+    background-color: darken(#62929E, 10%);
+    color: white;
+  }
+}
+
 
 

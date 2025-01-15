@@ -1,39 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService, Patient } from '../../services/firebase.service';
 
 @Component({
   selector: 'app-main-content',
   templateUrl: './main-content.component.html',
-  styleUrls: ['./main-content.component.scss']
+  styleUrls: ['./main-content.component.css']
 })
 export class MainContentComponent implements OnInit {
-
-  // กำหนดค่าตัวแปร
+  searchCriteria = {
+    vn: '',
+    hn: '',
+    id: '',
+    drugAllergy: ''
+  };
+  
+  patientData: Patient | null = null;
   currentDate: string = '';
   selectedButtonIndex: number = 0;
-  selectedButtonIndexDoctor: number = 0; 
-  // วันที่
-  ngOnInit() {
-    this.currentDate = this.getCurrentThaiDate();
-  }
-  getCurrentThaiDate(): string {
-    const now = new Date();
-    const day = String(now.getDate()).padStart(2, '0');
-    const month = String(now.getMonth() + 1).padStart(2, '0');
-    const year = now.getFullYear() + 543;
-    return `${day}/${month}/${year}`;
-    
-  }
+  selectedButtonIndexDoctor: number = 0;
+  iconSrc = '/img/icon.png';
+  iconAlt = 'Icon';
 
-  // เคลียร์การค้นหา
-  clearSearchInputs(): void {
-    const searchInputs = document.querySelectorAll<HTMLInputElement>('input.search');
-    searchInputs.forEach(input => {
-      input.value = '';
-    });
-  }
-
-
-  // ข้อความใน button แถวที่ 3
   buttons: string[] = [
     'Doctor Screen',
     'ข้อมูลการคัดกรอง',
@@ -61,14 +48,74 @@ export class MainContentComponent implements OnInit {
     'อาชีวเวชกรรม',
     'MEMO',
     'MEMO จิตเวช',
-    'คัดกรอง CLCP',
-
+    'คัดกรอง CLCP'
   ];
-  onButtonClick(index: number) {
-    this.selectedButtonIndex = index;  // อัพเดตเมื่อกดปุ่ม
+
+  constructor(private firebaseService: FirebaseService) { }
+
+  ngOnInit(): void {
+    // ตั้งค่าสำหรับการเริ่มต้นคอมโพเนนต์
+    this.currentDate = this.getCurrentThaiDate();
+  }
+
+  getCurrentThaiDate(): string {
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const year = now.getFullYear() + 543;
+    return `${day}/${month}/${year}`;
+  }
+
+  /**
+   * ค้นหาข้อมูลผู้ป่วยจาก Firestore
+   */
+  searchData(): void {
+    const { vn, hn, id } = this.searchCriteria;
+
+    if (!vn && !hn && !id) {
+      alert('กรุณากรอก VN, HN หรือ ID อย่างน้อยหนึ่งช่อง');
+      return;
+    }
+
+    this.firebaseService.searchPatient({ vn, hn, id }).subscribe((patients: Patient[]) => {
+      if (patients.length > 0) {
+        this.patientData = patients[0];
+        // Update searchCriteria with patientData to display in input fields
+        this.searchCriteria.vn = this.patientData.vn;
+        this.searchCriteria.hn = this.patientData.hn;
+        this.searchCriteria.id = this.patientData.id;
+        this.searchCriteria.drugAllergy = this.patientData.drugAllergy;
+      } else {
+        // Handle case when no data is found
+        this.clearSearchInputs();
+        alert('No patient data found.');
+      }
+    }, error => {
+      console.error('Error fetching patient data:', error);
+      alert('An error occurred while searching for patient data.');
+    });
+  }
+
+  /**
+   * เคลียร์ฟิลด์ค้นหาและผลลัพธ์การค้นหา
+   */
+  clearSearchInputs(): void {
+    this.searchCriteria = {
+      vn: '',
+      hn: '',
+      id: '',
+      drugAllergy: ''
+    };
+    this.patientData = null;
+  }
+
+  onButtonClick(index: number): void {
+    this.selectedButtonIndex = index;
+    // เพิ่มโค้ดเพิ่มเติมตามที่ต้องการ
   }
 
   onButtonClickDoctor(index: number): void {
     this.selectedButtonIndexDoctor = index;
+    // เพิ่มโค้ดเพิ่มเติมตามที่ต้องการ
   }
 }
