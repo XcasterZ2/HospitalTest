@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="main-container" style="background-color: white;border-radius: 20px;padding: 10px;">
     <div class="main-first container-fluid">
         <div class="row g-1 align-items-center flex-nowrap overflow-auto ">
             <div class="col-auto">
@@ -66,12 +66,14 @@
                 </div>
             </div>
             <div class="col-auto">
-                <button class="search-button" (click)="searchData()">
+                <button class="search-button d-flex align-items-center justify-content-center" 
+                        (click)="searchData()" 
+                        style="background-color: #23395B; color: white; border: none; border-radius: 5px; padding: 5px 15px; height: 38px;">
                     <span>ค้นหา</span>
                 </button>
             </div>
             <div class="col-auto">
-                <button class="clear-button" (click)="clearSearchInputs()">
+                <button class="clear-button btn d-flex align-items-center justify-content-center" (click)="clearSearchInputs()" style="background-color: #FF6B6B; color: white; border: none; border-radius: 5px; padding: 5px 15px; height: 38px;">
                     <span>Clear</span>
                 </button>
             </div>

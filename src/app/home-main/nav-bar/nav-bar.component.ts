@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database'; // Import AngularFireDatabase
 import { Observable } from 'rxjs';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,24 +10,42 @@ import { Observable } from 'rxjs';
 })
 export class NavBarComponent implements OnInit {
   isSidebarOpen = false;
-  userName: string = ''; // Initialize userName
+  userName: string = 'ผู้ใช้ไม่รู้จัก'; // Default value
   hn: string = '';
   vnId: string = '';
+  allergyInfo: string = ''; // Add variable for allergy information
 
   constructor(
-    private db: AngularFireDatabase // Inject AngularFireDatabase
+    private db: AngularFireDatabase, // Inject AngularFireDatabase
+    private userService: UserService
   ) {}
 
   ngOnInit(): void {
-    this.getUserName();
-  }
+    this.hn = 'some-hn-value';  // Replace with actual value or logic to set this
+    this.vnId = 'some-vnId-value';  // Replace with actual value or logic to set this
 
-  getUserName(): void {
-    this.db.object<{ name: string }>('users/yourUserId/name').valueChanges().subscribe((userData) => {
-      if (userData) {
-        this.userName = userData.name;
+    this.userService.getUserName(this.hn, this.vnId).subscribe(
+      (name: string) => {
+        if (name) {
+          this.userName = name;
+        } else {
+          console.error('No user name found');
+        }
+      },
+      (error) => {
+        console.error('Error fetching user name:', error);
       }
-    });
+    );
+
+    // Fetch allergy information
+    this.userService.getAllergyInfo(this.hn, this.vnId).subscribe(
+      (allergy: string) => {
+        this.allergyInfo = allergy;
+      },
+      (error) => {
+        console.error('Error fetching allergy information:', error);
+      }
+    );
   }
 
   toggleSidebar(): void {

@@ -100,12 +100,10 @@ export class MainContentComponent implements OnInit {
    * เคลียร์ฟิลด์ค้นหาและผลลัพธ์การค้นหา
    */
   clearSearchInputs(): void {
-    this.searchCriteria = {
-      vn: '',
-      hn: '',
-      id: '',
-      drugAllergy: ''
-    };
+    this.searchCriteria.vn = '';
+    this.searchCriteria.hn = '';
+    this.searchCriteria.id = '';
+    this.searchCriteria.drugAllergy = '';
     this.patientData = null;
   }
 

@@ -7,21 +7,36 @@ import { map, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://api.example.com/users'; // เปลี่ยนเป็น URL API จริงของคุณ
+  private apiUrl = 'https://firestore.googleapis.com/v1/projects/YOUR_PROJECT_ID/databases/(default)/documents/users'; // Replace with your actual Firestore URL
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getUserName(hn: string, vnId: string): Observable<string> {
-    console.log('เรียก API เพื่อดึงชื่อผู้ใช้ด้วย HN:', hn, 'และ VN ID:', vnId);
-    return this.http.get<{ name: string }>(`${this.apiUrl}?hn=${hn}&vnId=${vnId}`)
+    return this.http.get<any>(`${this.apiUrl}/${hn}`)
       .pipe(
         map(response => {
-          console.log('API ตอบกลับ:', response);
-          return response.name;
+          console.log('API Response:', response);
+          const fields = response.fields;
+          return fields ? fields.name.stringValue : 'ผู้ใช้ไม่รู้จัก';
         }),
         catchError(error => {
-          console.error('เกิดข้อผิดพลาดในการเรียก API:', error);
+          console.error('Error fetching user name:', error);
           return of('ผู้ใช้ไม่รู้จัก');
+        })
+      );
+  }
+
+  getAllergyInfo(hn: string, vnId: string): Observable<string> {
+    console.log('Fetching allergy info with HN:', hn, 'and VN ID:', vnId);
+    return this.http.get<{ allergy: string }>(`${this.apiUrl}/allergy?hn=${hn}&vnId=${vnId}`)
+      .pipe(
+        map(response => {
+          console.log('API response for allergy:', response);
+          return response.allergy;
+        }),
+        catchError(error => {
+          console.error('Error fetching allergy info:', error);
+          return of('No allergy information available');
         })
       );
   }
